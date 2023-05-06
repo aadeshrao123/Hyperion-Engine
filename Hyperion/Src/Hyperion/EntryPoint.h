@@ -5,7 +5,7 @@ extern Hyperion::Application* Hyperion::CreateApplication();
 
 int main(int argc, char** argv)
 {
-	printf("Hyperion Engine\n");
+	//printf("Hyperion Engine\n");
 	auto app = Hyperion::CreateApplication();
 	app->Run();
 	delete app;
