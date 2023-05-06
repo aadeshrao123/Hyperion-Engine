@@ -1,0 +1,3 @@
+[submodule "Hyperion/vendor/spdlog"]
+	path = Hyperion/vendor/spdlog
+	url = https://github.com/gabime/spdlog
