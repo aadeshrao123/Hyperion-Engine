@@ -4,6 +4,9 @@
     <Filter Include="Hyperion">
       <UniqueIdentifier>{73A2235D-5F6F-7E68-8888-6C1074B4B3F6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hyperion\Events">
+      <UniqueIdentifier>{F7AE816D-633A-EF31-6C4B-7226D8554B32}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Hyperion.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Hyperion\EntryPoint.h">
       <Filter>Hyperion</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hyperion\Events\ApplicationEvent.h">
+      <Filter>Hyperion\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hyperion\Events\Event.h">
+      <Filter>Hyperion\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hyperion\Events\KeyEvent.h">
+      <Filter>Hyperion\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hyperion\Events\MouseEvent.h">
+      <Filter>Hyperion\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Hyperion\Log.h">
       <Filter>Hyperion</Filter>
