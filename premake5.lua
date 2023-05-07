@@ -18,6 +18,9 @@ project "Hyperion"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-intermediate/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "Hypch.h"
+	pchsource "Hyperion/src/Hypch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

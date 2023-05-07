@@ -1,3 +1,5 @@
+#include "Hypch.h"
+
 #include "Application.h"
 
 #include "Hyperion/Events/ApplicationEvent.h"
