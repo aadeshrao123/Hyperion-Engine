@@ -10,6 +10,12 @@ workspace "Hyperion"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Hyperion/vendor/GLFW/include"
+
+include "Hyperion/vendor/GLFW"
+
 project "Hyperion"
 	location "Hyperion"
 	kind "SharedLib"
@@ -30,7 +36,14 @@ project "Hyperion"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links 
+	{ 
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

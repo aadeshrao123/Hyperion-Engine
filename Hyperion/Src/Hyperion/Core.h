@@ -10,4 +10,12 @@
 	#error Hyperion Only Supports Windows!
 #endif
 
+#ifdef HY_ENABLE_ASSERTS
+#define HY_ASSERT(x, ...) { if(!(x)) { HY_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#define HY_CORE_ASSERT(x, ...) { if(!(x)) { HY_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#else
+#define HY_ASSERT(x, ...)
+#define HY_CORE_ASSERT(x, ...)
+#endif
+
 #define BIT(x) (1 << x)

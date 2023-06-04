@@ -5,11 +5,13 @@
 #include "Hyperion/Events/ApplicationEvent.h"
 #include "Hyperion/Log.h"
 
+#include <GLFW/glfw3.h>
+
 namespace Hyperion
 {
 	Application::Application()
 	{
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -19,18 +21,12 @@ namespace Hyperion
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1920, 1080);
-		if (e.IsInCategory(EventCategoryApplication))
+		while (m_Running)
 		{
-			printf("EventCategoryApplication");
-			HY_TRACE(e);
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			printf("EventCategoryInput");
-			HY_TRACE(e);
-		}
-		while (true);
 	}
 
 }

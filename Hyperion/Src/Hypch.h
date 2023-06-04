@@ -12,6 +12,9 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Hyperion/Log.h"
+
+
 #ifdef HY_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

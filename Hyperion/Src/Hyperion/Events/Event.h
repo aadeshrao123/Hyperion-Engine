@@ -1,5 +1,6 @@
 #pragma once
 
+#include "Hypch.h"
 #include "Hyperion/Core.h"
 
 
