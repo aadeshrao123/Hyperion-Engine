@@ -13,8 +13,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Hyperion/vendor/GLFW/include"
+IncludeDir["Glad"] = "Hyperion/vendor/Glad/include"
 
 include "Hyperion/vendor/GLFW"
+include "Hyperion/vendor/Glad"
 
 project "Hyperion"
 	location "Hyperion"
@@ -37,12 +39,14 @@ project "Hyperion"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links 
 	{ 
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -54,7 +58,8 @@ project "Hyperion"
 		defines
 		{
 			"HY_PLATFORM_WINDOWS",
-			"HY_BUILD_DLL"
+			"HY_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands

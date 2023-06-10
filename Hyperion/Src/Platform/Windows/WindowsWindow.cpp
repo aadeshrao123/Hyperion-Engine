@@ -5,6 +5,7 @@
 #include "Hyperion/Events/MouseEvent.h"
 #include "Hyperion/Events/KeyEvent.h"
 
+#include <glad/glad.h>
 
 namespace Hyperion {
 
@@ -49,6 +50,8 @@ namespace Hyperion {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		HY_CORE_ASSERT(status, "Failed to initialize Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 

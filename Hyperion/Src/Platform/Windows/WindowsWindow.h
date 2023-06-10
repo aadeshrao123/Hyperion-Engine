@@ -1,10 +1,9 @@
 #pragma once
 
 #include "Hyperion/Window.h"
-
 #include <GLFW/glfw3.h>
 
-namespace Hyperion 
+namespace Hyperion
 {
 
 	class WindowsWindow : public Window
