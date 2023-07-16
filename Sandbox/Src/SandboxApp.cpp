@@ -26,6 +26,7 @@ class Sandbox : public Hyperion::Application
 		Sandbox()
 		{
 			PushLayer(new ExampleLayer());
+			PushOverlay(new Hyperion::ImGuiLayer());
 		}
 		~Sandbox()
 		{

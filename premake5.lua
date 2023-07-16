@@ -14,9 +14,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Hyperion/vendor/GLFW/include"
 IncludeDir["Glad"] = "Hyperion/vendor/Glad/include"
+IncludeDir["ImGui"] = "Hyperion/vendor/imgui"
 
 include "Hyperion/vendor/GLFW"
 include "Hyperion/vendor/Glad"
+include "Hyperion/vendor/imgui"
 
 project "Hyperion"
 	location "Hyperion"
@@ -40,13 +42,15 @@ project "Hyperion"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links 
 	{ 
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
