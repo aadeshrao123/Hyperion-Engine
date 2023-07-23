@@ -10,12 +10,22 @@ public:
 
 	void OnUpdate() override
 	{
-		HY_INFO("ExampleLayer::Update");
+		//HY_INFO("ExampleLayer::Update");
+		if (Hyperion::Input::IsKeyPressed(HY_KEY_TAB))
+		{
+			HY_TRACE("Tab key is pressed (poll)!");
+		}
 	}
 
 	void OnEvent(Hyperion::Event& event) override
 	{
-		HY_TRACE("{0}", event);
+		if (event.GetEventType() == Hyperion::EventType::KeyPressed)
+		{
+			Hyperion::KeyPressedEvent& e = (Hyperion::KeyPressedEvent&)event;
+			if (e.GetKeyCode() == HY_KEY_TAB)
+				HY_TRACE("Tab key is pressed (event)!");
+			HY_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 
 };

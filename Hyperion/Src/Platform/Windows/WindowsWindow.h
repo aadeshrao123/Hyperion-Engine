@@ -24,6 +24,9 @@ namespace Hyperion
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();
+
+		inline virtual void* GetNativeWindow() const { return m_Window; }
+
 	private:
 		GLFWwindow* m_Window;
 
