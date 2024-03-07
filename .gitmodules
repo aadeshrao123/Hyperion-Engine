@@ -1,9 +1,6 @@
 [submodule "Hyperion/vendor/spdlog"]
 	path = Hyperion/vendor/spdlog
 	url = https://github.com/gabime/spdlog
-[submodule "Hyperion/vendor/imgui"]
-	path = Hyperion/vendor/imgui
-	url = https://github.com/aadeshrao123/imgui.git
 [submodule "Hyperion/vendor/glm"]
 	path = Hyperion/vendor/glm
 	url = https://github.com/g-truc/glm.git
