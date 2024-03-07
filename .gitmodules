@@ -4,6 +4,3 @@
 [submodule "Hyperion/vendor/glm"]
 	path = Hyperion/vendor/glm
 	url = https://github.com/g-truc/glm.git
-[submodule "Hyperion/vendor/myimgui"]
-	path = Hyperion/vendor/myimgui
-	url = https://github.com/aadeshrao123/myimgui.git
