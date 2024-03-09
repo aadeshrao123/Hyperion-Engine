@@ -5,6 +5,7 @@
 #include "Hyperion/LayerStack.h"
 #include "Hyperion/Events/Event.h"
 #include "Hyperion/Events/ApplicationEvent.h"
+#include "ImGui/ImGuiLayer.h"
 
 
 namespace Hyperion
@@ -29,6 +30,7 @@ namespace Hyperion
 		bool OnWindowsClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 

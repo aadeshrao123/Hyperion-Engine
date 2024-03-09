@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef HY_PLATFORM_WINDOWS
+#if HY_DYNAMIC_LINK
 	#ifdef HY_BUILD_DLL
 		#define HYPERION_API __declspec(dllexport)
 	#else
 		#define HYPERION_API __declspec(dllimport)
 	#endif
+#else
+#define HYPERION_API
+#endif
 #else
 	#error Hyperion Only Supports Windows!
 #endif

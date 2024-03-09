@@ -1,4 +1,6 @@
 #include "Hyperion.h"
+#include "imgui/imgui.h"
+
 
 class ExampleLayer : public Hyperion::Layer
 {
@@ -15,6 +17,14 @@ public:
 		{
 			HY_TRACE("Tab key is pressed (poll)!");
 		}
+	}
+
+	
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
 	}
 
 	void OnEvent(Hyperion::Event& event) override
@@ -36,7 +46,6 @@ class Sandbox : public Hyperion::Application
 		Sandbox()
 		{
 			PushLayer(new ExampleLayer());
-			PushOverlay(new Hyperion::ImGuiLayer());
 		}
 		~Sandbox()
 		{
