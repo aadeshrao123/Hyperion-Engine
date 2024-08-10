@@ -7,3 +7,6 @@
 [submodule "Hyperion/vendor/imgui"]
 	path = Hyperion/vendor/imgui
 	url = https://github.com/aadeshrao123/imgui.git
+[submodule "Hyperion/vendor/glfw"]
+	path = Hyperion/vendor/glfw
+	url = https://github.com/glfw/glfw.git

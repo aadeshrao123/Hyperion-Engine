@@ -3,6 +3,10 @@
 bin-intermediate/
 Intermediates/
 
+# Ignore build directories
+build/
+cmake-build-*/
+
 # Hazel files
 *.log
 
